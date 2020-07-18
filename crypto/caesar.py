@@ -6,7 +6,7 @@ import sys
 decode_str = "abcdefghijklmnopqrstuvwxyz"
 
 
-def decode_caesar():
+def decode_caesar(ciphertext):
     flag = ''
     
     for tmp_char in ciphertext:
@@ -28,7 +28,7 @@ if __name__ == '__main__':
         ciphertext = sys.argv[1]
         offset = int(sys.argv[2])
         if offset <= 25:
-        	decode_caesar()
+        	decode_caesar(ciphertext.lower())
         else:
         	print ("Error: offset must be Less than 26")
     except:
